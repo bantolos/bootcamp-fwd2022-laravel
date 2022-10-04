@@ -1,18 +1,18 @@
 <?php
 
-namespace App\Models\MasterData;
+namespace App\Models\Operational;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Specialist extends Model
+class Doctor extends Model
 {
     // use HasFactory;
     use SoftDeletes;
     
     // declare table
-    public $table = 'specialist';
+    public $table = 'doctor';
 
     // this field must type date yyyy-mm-dd hh:mm:ss
     protected $dates = [
@@ -23,8 +23,10 @@ class Specialist extends Model
 
     // declare fillable
     protected $fillable = [
+        'specialist_id',
         'name',
-        'price',
+        'fee',
+        'photo',
         'created_at',
         'updated_at',
         'deleted_at',

@@ -1,18 +1,18 @@
 <?php
 
-namespace App\Models\MasterData;
+namespace App\Models\ManagementAccess;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Specialist extends Model
+class DetailUser extends Model
 {
     // use HasFactory;
     use SoftDeletes;
     
     // declare table
-    public $table = 'specialist';
+    public $table = 'detail_user';
 
     // this field must type date yyyy-mm-dd hh:mm:ss
     protected $dates = [
@@ -23,8 +23,12 @@ class Specialist extends Model
 
     // declare fillable
     protected $fillable = [
-        'name',
-        'price',
+        'user_id',
+        'type_user_id',
+        'contact',
+        'address',
+        'photo',
+        'gender',
         'created_at',
         'updated_at',
         'deleted_at',
